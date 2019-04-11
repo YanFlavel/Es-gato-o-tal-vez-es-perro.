@@ -116,7 +116,7 @@ def predict(w,b,X):
     #Obtener la predicción sin usar for
     Y_DESTINO = np.round(A)
     for i in range(A.shape[1]):
-        # Convert probabilities A[0,i] to actual predictions p[0,i]
+       
         if (A[0,i] <= 0.5):
             Y_prediction[0,i] = 0
         else:
@@ -126,6 +126,7 @@ def predict(w,b,X):
     print("Mi prediccion: ",Y_DESTINO)
     return Y_prediction
 
+#Prueba de la predicción
 w = np.array([[0.1124579],[0.23106775]])
 b = -0.3
 X = np.array([[1.,-1.1,-3.2],[1.2,2.,0.1]])
